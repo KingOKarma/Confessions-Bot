@@ -6,9 +6,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "discord.js-commando": "^0.11.0-dev",
-    "fs": "^0.0.1-security",
     "js-yaml": "^3.14.1",
-    "path": "^0.12.7",
+    "nanoid": "git+https://github.com/ai/nanoid.git",
     "tsc": "^1.20150623.0",
     "typescript": "^4.1.3"
   },

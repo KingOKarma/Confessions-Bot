@@ -5,5 +5,5 @@ export function onReady(bot: Client) {
     return;
   }
   console.log(`${bot.user.tag} is online!`);
-  bot.user.setActivity('... always watching...', { type: 'WATCHING' });
+  bot.user.setActivity('Your confessions, and your love interests', { type: 'WATCHING' });
 }

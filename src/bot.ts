@@ -6,7 +6,7 @@ import { CONFIG } from './globals';
 async function main() {
   const bot = new Client({
   // My choses prefix is "c." you can choose anything you want!
-    commandPrefix: 'c.',
+    commandPrefix: CONFIG.prefix,
     owner: CONFIG.owners,
 
   });
@@ -15,9 +15,14 @@ async function main() {
   bot.on('ready', () => onReady(bot));
 
   // registers all groups/commands/etc
-  bot.registry.registerGroups([
-    ['group1'],
-  ]).registerDefaults()
+  bot.registry.registerDefaultTypes()
+  .registerGroups([
+    ['confess'],
+  ]).registerDefaultGroups()
+  .registerDefaultCommands({
+    unknownCommand: false,
+})
+
     .registerCommandsIn(
       path.join(__dirname, 'commands'),
     );

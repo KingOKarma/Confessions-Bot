@@ -15,12 +15,21 @@ export default class Config {
 
     public readonly owners: string[];
 
+    public readonly guildID: string;
+
+    public readonly confessionChannelID: string;
+
+    public readonly staffChannelID: string;
+
     private static LOCATION = './config.yml';
 
     constructor() {
       this.token = '';
       this.prefix = '';
       this.owners = [''];
+      this.guildID = '';
+      this.confessionChannelID = '';
+      this.staffChannelID = '';
     }
 
     /**
