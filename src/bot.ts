@@ -16,12 +16,12 @@ async function main() {
 
   // registers all groups/commands/etc
   bot.registry.registerDefaultTypes()
-  .registerGroups([
-    ['confess'],
-  ]).registerDefaultGroups()
-  .registerDefaultCommands({
-    unknownCommand: false,
-})
+    .registerGroups([
+      ['confess'],
+    ]).registerDefaultGroups()
+    .registerDefaultCommands({
+      unknownCommand: false,
+    })
 
     .registerCommandsIn(
       path.join(__dirname, 'commands'),

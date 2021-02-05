@@ -81,7 +81,7 @@ export default class confessCommand extends commando.Command {
                     return msg.author.send('Alright then, have a nice day! :D');
                   }
 
-                  return msg.author.send(`So you're telling me you want to say \n\n\`\`\`${ConfessMsg}\`\`\`\n\n right?\n Please respond with either \`yes\` or \`no\``)
+                  return msg.author.send(`So you're telling me you want to say \n\n\`\`\`${ConfessMsg.content}\`\`\`\n\n right?\n Please respond with either \`yes\` or \`no\``)
                     .then(() => {
                       msg.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
                         .then(async (confirmation) => {
@@ -135,7 +135,7 @@ export default class confessCommand extends commando.Command {
                               { dynamic: true },
                             ))
                             .setTitle('You have been confessed to!')
-                            .setDescription(ConfessMsg)
+                            .setDescription(ConfessMsg.content)
                             .setColor(embedColour)
                             .setTimestamp()
                             .setFooter(uniqueID);
